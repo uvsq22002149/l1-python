@@ -22,18 +22,18 @@ import tkinter as tk
 HEIGHT, WIDTH = 500, 750
 COTE = 10
 COULEUR_QUADR = 'grey30'
-c_water = '#7FFFD4'
-c_forest = '#228B22'
-c_fire = '#FF0000'
-c_meadow = '#9ACD32'
-c_hot_ashes = '#8B0000'
-c_cold_ashes ='#332D21'
+C_WATER= '#7FFFD4'
+C_FOREST = '#228B22'
+C_FIRE= '#FF0000'
+C_MEADOW = '#9ACD32'
+C_HOT_ASHES = '#8B0000'
+C_COLD_ASHES ='#332D21'
 
 ####################### Definition des vraiables globales ########################
 
 ####################### Definition des fonctions #################################
 
-def quadrillage():
+def LandGrid():
     """Affiche un quadrillage constitué de carrés de côté COTE."""
     y = 0
     while y <= HEIGHT:
@@ -45,45 +45,45 @@ def quadrillage():
         x += COTE
 
 
-def mofiCase():
+def ModifieCase():
     """Fixe le type de la case de coordonnées x,y."""
     pass
 
-def fire():
+def Fire():
     """Modifie le type de la case cliquer en "feu"."""
     pass
 
 
-def stop():
+def Stop():
     """Interrompt le programme.""" 
     pass
 
 
-def generation():
+def Generate():
     """Fonction du boutton qui permet de générer un nouveau environnement. """
     pass
 
 
-def sauvgarderFich():
+def SaveFich():
     """Sauvgarde dans un ficher l'environement créer."""
     pass
 
 
-def chargeTerrain():
+def LoadLand():
     """Charge un fichier d'un environement"""
     pass
 
 
-def avancement():
+def Advancement():
     pass
 
 
-def comptage():
+def Counting():
     """Compte le nombre de case en feu et le nombre d'étape de la simulation"""
     pass
 
 
-def vitesse():
+def Speed():
     """Permet de modifier la vitesse de la simulation"""
     pass
 
@@ -93,24 +93,23 @@ def vitesse():
 racine = tk.Tk()
 canvas = tk.Canvas(racine, height = HEIGHT, width = WIDTH, bg= 'white')
 
-canvas.grid(column = 0, row=0)
+canvas.grid(column = 1, row=0, rowspan = 5)
 
-quadrillage()
+LandGrid()
 
-####################### boutton #################
+###################### boutton #################
 
-bouton_terrain_quelconque = tk.Button(racine, text = "terrain au hasard")
-bouton_sauvegrde_terrain = tk.Button(racine, text = "sauvegarder le terrain")
-bouton_charger_terrain = tk.Button(racine, text = "ouvrir un terrain")
-bouton_start = tk.Button(racine, text = "start")
-bouton_stop = tk.Button(racine, text = "stop")
+bouton_terrain_quelconque  =  tk . Button ( racine , text  =  "terrain au hasard" )
+bouton_sauvegrde_terrain  =  tk . Button ( racine , text  =  "sauvegarder le terrain" )
+bouton_charger_terrain  =  tk . Button ( racine , text  =  "ouvrir un terrain" )
+bouton_start  =  tk . Button ( racine , text  =  "start" )
+bouton_stop  =  tk . Button ( racine , text  =  "stop" )
 
-bouton_terrain_quelconque.grid(column = 0, row = 0)
-bouton_sauvegrde_terrain.grid(column = 0, row = 1)
-bouton_charger_terrain.grid(column = 0, row = 2)
-bouton_start.grid(column = 0, row = 3)
-bouton_stop.grid(column = 0, row = 4)
-canvas.grid(column = 1, row = 0, rowspan = 5)
+bouton_terrain_quelconque . grid ( column  =  0 , row  =  0 )
+bouton_sauvegrde_terrain . grid ( column  =  0 , row  =  1 )
+bouton_charger_terrain . grid ( column  =  0 , row  =  2 )
+bouton_start . grid ( column  =  0 , row  =  3 )
+bouton_stop . grid ( column  =  0 , row  =  4 )
 
 
 racine.mainloop()
